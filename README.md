@@ -48,3 +48,38 @@ Entregar:
 ● Instrucciones de cómo ejecutar el programa o la API. (Para Nivel 2 y 3: En README de
 github).
 ● URL de la API (Nivel 2 y 3).
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+La aplicación fue desarrollada con:
+
+1. Eclipse IDE for Java Developers.
+2. Java JDK 1.8
+3. Jersey 2.32
+4. jax-rs 2.32
+5. Tomcat 9.0.44
+
+Para ejecutar:
+1. Se crea en carpeta TOMCAT_HOME/webapps/TestMagneto
+2. Se crea carpeta WEB-INF dentro de TestMagneto
+3. En WEB-INF se crea carpeta classes, dentro de esta caprte se copia el compilado generado en Eclipse.
+4. En la carpeta WEB-INF se crea carpeta lib y se incluyen los jars de Jersey y jax-rs 2.32, pueden usar Maven para patraer las dependencias si asó lo desea.
+5. en WEB-INF se copia el archivo web.xml.
+
+Inicie Tomcat, para probar puede usar el cliente Postman o REQBIN.
+En el cliente seleccionado coloque URL Ej: http://localhost:8080/TestMagneto/mutant/ismutant/, seleccionar el content-manager JSON y en el cuerpo coloque la combinación ADN deseada Ej :
+
+{
+    "dna": [
+        "TTGCGA",
+        "CAGTGC",
+        "TTATGT",
+        "AGAAGG",
+        "CCTCTA",
+        "TCACTG"
+    ]
+}
+
+
+
+
